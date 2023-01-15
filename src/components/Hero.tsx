@@ -16,7 +16,7 @@ const Hero = () => (
         className={`bg-accent-gradient flex flex-row items-center rounded-[10px] py-[1rem] px-4`}
       >
         <div className='mr-2 h-[10px] w-[10px] rounded-full bg-emerald-300' />
-        <p className={`${styles.paragraph}`}>
+        <p className='paragraph'>
           <span className='text-white'>¡Bienvenido </span>a mi sitio web
           <span className='text-white'> profesional!</span>
         </p>
@@ -30,7 +30,7 @@ const Hero = () => (
         </h1>
       </section>
 
-      <p className={`${styles.paragraph} max-w-[590px]`}>
+      <p className='paragraph max-w-[590px]'>
         Soy un desarrollador web especializado en ReactJS, me dedico a crear
         soluciones interactivas y atractivas para los usuarios. Aquí podrás ver
         mis proyectos y conocer más sobre mi experiencia y habilidades.

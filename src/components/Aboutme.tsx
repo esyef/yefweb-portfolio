@@ -1,36 +1,41 @@
 import Image from 'next/image';
 import { profile } from '../assets';
-import styles, { layout } from '../styles/style';
 
 const Aboutme = () => (
-  <section className={`${layout.sectionReverse} relative  mt-10 px-4`}>
-    <div className='-rigth-1/2 white__gradient absolute  top-0 -z-[3] h-[80%] w-[90%] rounded-full' />
-    <div className='-rigth-1/2 pink__gradient absolute  bottom-0 z-[0] h-[90%] w-[50%] rounded-full' />
-    <div className={layout.sectionImgReverse}>
-      <Image
-        src={profile}
-        alt='Yeferson Olarte'
-        className='h-[100%] w-[100%]'
-      />
+  <section className='relative py-12'>
+    <div className='mx-auto max-w-screen-xl px-4'>
+      <section className='flex flex-col items-center justify-between gap-8 md:flex-row'>
+        <div className='md:w-1/3'>
+          <Image
+            src={profile}
+            alt='Foto de Perfil'
+            className='mx-auto h-auto w-full rounded-full object-cover mix-blend-difference ss:h-96 ss:w-96 md:mx-0 md:mr-6'
+          />
+        </div>
+        <div className='flex flex-col gap-6 md:w-2/3'>
+          <h2 className='text-center text-4xl font-medium text-dimWhite md:text-left'>
+            Yeferson Olarte Roncancio
+          </h2>
+          <p className='paragraph text-center text-lg md:text-left'>
+            Soy un desarrollador web apasionado por aprender y crear soluciones
+            innovadoras utilizando las últimas tecnologías frontend. Mi
+            experiencia incluye trabajar con React, Next.js, JavaScript, HTML y
+            CSS. Me gusta trabajar en equipo y siempre estoy buscando nuevos
+            desafíos y oportunidades para crecer en mi carrera y mejorar mis
+            habilidades en las tecnologías frontend.
+          </p>
+        </div>
+      </section>
     </div>
 
-    <section className={layout.sectionInfo}>
-      <h2 className={styles.heading2}>Acerca de mí</h2>
-      <p className={`mt-5 max-w-[470px] text-dimWhite`}>
-        Soy un apasionado desarrollador frontend con experiencia en ReactJS y
-        estudiante de ingeniería de sistemas en Bogotá. Mi experiencia en el
-        desarrollo de interfaces de usuario atractivas y fáciles de usar me
-        permite crear soluciones digitales que no solo se ven bien, sino que
-        también son intuitivas y fáciles de usar para el usuario final. Me
-        apasiona trabajar en proyectos desafiantes y siempre estoy buscando
-        aprender y mejorar mis habilidades. En mi tiempo libre, disfruto de
-        aprender nuevas tecnologías y seguir las tendencias en el mundo del
-        desarrollo web. Estoy emocionado de continuar mi carrera en el campo de
-        la tecnología y ayudar a las empresas a alcanzar sus objetivos
-        digitales.
-      </p>
-    </section>
+    <div className='pink__gradient absolute top-0 z-[0] h-[35%] w-[90%]' />
+    <div className='withe__gradient absolute bottom-40 z-[1] h-[80%] w-[80%] rounded-full' />
+    <div className='blue__gradient absolute right-20 bottom-20 z-[0] h-[35%] w-[50%]' />
   </section>
 );
 
 export default Aboutme;
+
+{
+  /*  */
+}
