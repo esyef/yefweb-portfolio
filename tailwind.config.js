@@ -1,15 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
   ],
-  mode: 'jit',
+  // mode: 'jit',
   theme: {
     extend: {
-      backgroundImage: {
-        profile: "url('/assets/blob.svg')",
-      },
       colors: {
         primary: '#00040f',
         secondary: '#00f6ff',

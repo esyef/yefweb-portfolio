@@ -27,22 +27,22 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className='w-full flex py-6 justify-between items-center navbar '>
+    <nav className='navbar flex w-full items-center justify-between py-6 '>
       <Link href={`#inicio`}>
         <Image
           src={logo}
           alt='yefweb logo'
-          className='w-[full] h-[32px]'
+          className='h-[32px] w-[full]'
           width={100}
           height={32}
         />
       </Link>
 
-      <ul className='list-none sm:flex hidden justify-end items-center flex-1 '>
+      <ul className='hidden flex-1 list-none items-center justify-end sm:flex '>
         {navLinks.map((nav, index) => (
           <li
             key={nav.path + index}
-            className={`font-poppins font-normal cursor-pointer text-[16px] text-white mr-10 ${
+            className={`mr-10 cursor-pointer font-poppins text-[16px] font-normal text-white ${
               index === navLinks.length - 1 ? 'mr-0' : 'mr-10'
             }`}
           >
@@ -51,11 +51,11 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className='sm:hidden flex flex-1 justify-end  items-center'>
+      <div className='flex flex-1 items-center justify-end  sm:hidden'>
         <Image
           src={toggle ? close : menu}
           alt='icons menu'
-          className='w-[28px] h-[28px] object-contain'
+          className='h-[28px] w-[28px] object-contain'
           width={28}
           height={28}
           onClick={() => setToggle((prev) => !prev)}
@@ -64,13 +64,13 @@ const Navbar = () => {
         <div
           className={`${
             toggle ? 'flex' : 'hidden'
-          } p-6  bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-lg sidebar z-40`}
+          } bg-black-gradient  sidebar absolute top-20 right-0 z-40 mx-4 my-2 min-w-[140px] rounded-lg p-6`}
         >
-          <ul className='list-none flex flex-col justify-end  flex-1 '>
+          <ul className='flex flex-1 list-none flex-col  justify-end '>
             {navLinks.map((nav, index) => (
               <li
                 key={nav.path + index}
-                className={`font-poppins font-normal cursor-pointer text-[16px] text-white mr-10 ${
+                className={`mr-10 cursor-pointer font-poppins text-[16px] font-normal text-white ${
                   index === navLinks.length - 1 ? 'mr-0' : 'mb-4'
                 }`}
               >

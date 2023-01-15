@@ -18,7 +18,7 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/logo.svg' />
       </Head>
-      <div className='bg-primary w-full overflow-hidden '>
+      <div className='w-full overflow-hidden bg-primary '>
         <header className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
             <Navbar />
