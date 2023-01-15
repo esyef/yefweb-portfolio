@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from '@next/font/google';
 import styles from '../styles/style';
-import { Hero, Navbar } from '../components';
+import { Aboutme, Hero, Navbar } from '../components';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -18,7 +18,7 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/logo.svg' />
       </Head>
-      <div className='bg-primary w-full overflow-hidden'>
+      <div className='bg-primary w-full overflow-hidden '>
         <header className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
             <Navbar />
@@ -35,6 +35,8 @@ export default function Home() {
           <section className={`${styles.boxWidth}`}>
             {/* <Stats /> <Business /> <Billing /> <CardDeal /> <Testimonials />{" "}
           <Clients /> <CTA /> <Footer /> */}
+
+            <Aboutme />
           </section>
         </main>
       </div>

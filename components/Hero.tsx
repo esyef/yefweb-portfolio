@@ -7,7 +7,7 @@ import Button from './Button';
 const Hero = () => (
   <section
     id='inicio'
-    className={`${styles.paddingY} flex md:flex-row flex-col relative`}
+    className={`${styles.paddingY} flex md:flex-row flex-col relative max-w-7xl `}
   >
     <section
       className={`flex-1 flex-col xl:px-0 sm:px-16 px-6  flex items-start`}

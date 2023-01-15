@@ -7,6 +7,9 @@ module.exports = {
   mode: 'jit',
   theme: {
     extend: {
+      backgroundImage: {
+        profile: "url('/assets/blob.svg')",
+      },
       colors: {
         primary: '#00040f',
         secondary: '#00f6ff',
