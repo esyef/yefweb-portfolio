@@ -5,12 +5,9 @@ import styles from '../styles/style';
 import Button from './Button';
 
 const Hero = () => (
-  <section
-    id='inicio'
-    className={`${styles.paddingY} relative flex max-w-7xl flex-col md:flex-row `}
-  >
+  <section id='inicio' className='relative mt-10  flex  flex-col md:flex-row'>
     <section
-      className={`flex flex-1 flex-col items-start px-6  sm:px-16 xl:px-0`}
+      className={`flex flex-1 flex-col items-start gap-6  px-6 sm:px-16 xl:px-0`}
     >
       <article
         className={`bg-accent-gradient flex flex-row items-center rounded-[10px] py-[1rem] px-4`}
@@ -37,7 +34,7 @@ const Hero = () => (
         ¡Disfruta tu visita!
       </p>
 
-      <Button styles='mt-5' href='#proyectos'>
+      <Button type='primary' href='#proyectos'>
         Ver proyectos
       </Button>
     </section>
@@ -52,6 +49,7 @@ const Hero = () => (
       />
     </div>
 
+    {/* Gradients decoration */}
     <div className='pink__gradient absolute top-0 z-[0] h-[35%] w-[90%]' />
     <div className='withe__gradient absolute bottom-40 z-[1] h-[80%] w-[80%] rounded-full' />
     <div className='blue__gradient absolute right-20 bottom-20 z-[0] h-[35%] w-[50%]' />

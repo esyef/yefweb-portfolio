@@ -1,6 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from '@next/font/google';
 import styles from '../styles/style';
 import { Aboutme, Hero, Navbar } from '../components';
 
@@ -18,27 +16,20 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/logo.svg' />
       </Head>
-      <div className='w-full overflow-hidden bg-primary '>
-        <header className={`${styles.paddingX} ${styles.flexCenter}`}>
-          <div className={`${styles.boxWidth}`}>
+      <div className='overflow-hidden bg-primary '>
+        <div className='boxWidth'>
+          <header className={`${styles.paddingX} ${styles.flexCenter}`}>
             <Navbar />
-          </div>
-        </header>
+          </header>
 
-        <section className={`bg-primary ${styles.flexStart}`}>
-          <article className={`${styles.boxWidth}`}>
+          <section className={`bg-primary ${styles.flexStart}`}>
             <Hero />
-          </article>
-        </section>
-
-        <main className={`bg-primary ${styles.flexStart} ${styles.paddingX}`}>
-          <section className={`${styles.boxWidth}`}>
-            {/* <Stats /> <Business /> <Billing /> <CardDeal /> <Testimonials />{" "}
-          <Clients /> <CTA /> <Footer /> */}
-
-            <Aboutme />
           </section>
-        </main>
+
+          <main className={`bg-primary ${styles.flexStart} ${styles.paddingX}`}>
+            <Aboutme />
+          </main>
+        </div>
       </div>
     </>
   );

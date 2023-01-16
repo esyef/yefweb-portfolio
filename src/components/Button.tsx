@@ -1,19 +1,27 @@
 import { ReactNode } from 'react';
 
+type button = 'primary' | 'secondary';
+
 type props = {
-  styles: string;
   children: ReactNode;
-  href?: string;
+  href: string;
+  type: button;
 };
 
-const Button = ({ styles, children, href }: props) => {
+const Button = ({ children, href, type }: props) => {
   return (
-    <button
-      type='button'
-      className={`py-4 px-6 bg-blue-gradient font-poppins font-medium text-[18px] text-slate-900 outline-none ${styles}  rounded-[10px]`}
+    <a
+      href={href}
+      className={` button hover:shadow-xl hover:shadow-dimBlue
+       ${
+         type === 'primary'
+           ? 'button-primary bg-blue-gradient text-primary hover:text-white'
+           : 'button-secondary text-gradient'
+       }
+      `}
     >
-      <a href={href}>{children}</a>
-    </button>
+      {children}
+    </a>
   );
 };
 
