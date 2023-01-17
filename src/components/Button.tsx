@@ -15,7 +15,7 @@ const Button = ({ children, href, type }: props) => {
       className={` button hover:shadow-xl hover:shadow-dimBlue
        ${
          type === 'primary'
-           ? 'button-primary bg-blue-gradient text-primary hover:text-white'
+           ? 'button-primary bg-blue-gradient text-primary '
            : 'button-secondary text-gradient'
        }
       `}
