@@ -18,3 +18,23 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.border-gradient {
+  border-bottom: 1px solid transparent;
+  -o-border-image: -o-linear-gradient(left, #a5f3fc, black) 10;
+  border-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#a5f3fc),
+      to(black)
+    )
+    10;
+  border-image: linear-gradient(to right, hsl(186, 94%, 82%), rgb(35, 149, 161))
+    10;
+  border-image-slice: 1;
+}
+
+.btn-boder {
+  @apply border-[1px];
+}

@@ -23,7 +23,7 @@ const Sidebar = ({ linkItem, toggleActive }: PROPS) => {
       </button>
 
       <nav className={`${isOpen ? 'block' : 'hidden'}  `}>
-        <ul className='absolute top-12 right-0  flex animate-sidebar  flex-col gap-6 rounded-lg bg-gradient-to-r from-cyan to-primary py-6 px-8 bg-blend-darken delay-150'>
+        <ul className='absolute top-10 right-0  flex animate-sidebar flex-col gap-6 rounded-lg bg-gradient-to-r from-cyan to-primary py-6 px-8 bg-blend-darken delay-150'>
           {navLinks.map((link) => (
             <Link
               href={`#${link.path}`}
