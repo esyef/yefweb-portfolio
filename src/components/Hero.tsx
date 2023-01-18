@@ -3,7 +3,7 @@ import { hero } from '../assets';
 import Button from './Button';
 
 const Hero = () => (
-  <section className='md:flex md:flex-wrap '>
+  <section className='mb-24 md:flex md:flex-wrap'>
     <article className='mb-6 flex flex-col gap-6  md:mb-0 md:w-1/2'>
       <div>
         <h1 className='text-3xl tracking-widest'>Soy Yeferson</h1>

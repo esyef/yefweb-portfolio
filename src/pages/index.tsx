@@ -27,8 +27,9 @@ export default function Home() {
             </section>
 
             <main className=''>
-              {/* <Aboutme /> */}
               <Skills />
+              {/* <Aboutme /> */}
+
               <Projects />
             </main>
           </div>
