@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ReactNode } from 'react';
 
 type button = 'primary' | 'secondary';
@@ -10,21 +11,9 @@ type props = {
 
 const Button = ({ children, href, type }: props, { ...otherProps }) => {
   return (
-    <a
-      href={href}
-      className={` button hover:shadow-xl hover:shadow-dimBlue
- 
-       ${
-         type === 'primary'
-           ? 'button-primary bg-blue-gradient text-primary '
-           : 'button-secondary text-gradient'
-       }
-      `}
-      {...otherProps}
-      rel='norefer'
-    >
+    <Link {...otherProps} href={href}>
       {children}
-    </a>
+    </Link>
   );
 };
 

@@ -12,3 +12,9 @@
   left: -0.55rem;
   top: 50%;
 }
+
+.text-gradient {
+  background-image: linear-gradient(to right, #ff0000, #ffff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
