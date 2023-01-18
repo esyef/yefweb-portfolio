@@ -8,17 +8,20 @@ type props = {
   type: button;
 };
 
-const Button = ({ children, href, type }: props) => {
+const Button = ({ children, href, type }: props, { ...otherProps }) => {
   return (
     <a
       href={href}
       className={` button hover:shadow-xl hover:shadow-dimBlue
+ 
        ${
          type === 'primary'
            ? 'button-primary bg-blue-gradient text-primary '
            : 'button-secondary text-gradient'
        }
       `}
+      {...otherProps}
+      rel='norefer'
     >
       {children}
     </a>

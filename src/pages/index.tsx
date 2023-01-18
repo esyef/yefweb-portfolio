@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import styles from '../styles/style';
-import { Aboutme, Hero, Navbar, Skills } from '../components';
+import { Aboutme, Hero, Navbar, Skills, Projects } from '../components';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -16,8 +15,8 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/logo.svg' />
       </Head>
-      <div className='overflow-hidden bg-primary'>
-        <div className='container mx-auto px-6 md:px-14 lg:px-20'>
+      <div className='overflow-hidden bg-primary bg-[url("../assets/dark-pattern.jpg")] bg-contain bg-repeat-round'>
+        <div className=''>
           <header className=''>
             <Navbar />
           </header>
@@ -29,6 +28,7 @@ export default function Home() {
           <main className=''>
             <Aboutme />
             <Skills />
+            <Projects />
           </main>
         </div>
       </div>

@@ -15,27 +15,26 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className='relative flex w-full flex-col flex-wrap gap-6 py-44 md:items-center md:justify-center'>
-      <h2 className='heading2'>
+    <section className='mt-36'>
+      <h2 className='mb-6 text-center text-xl font-semibold text-white md:text-4xl'>
         Un buen código es la base <br /> De una excelente aplicación
       </h2>
 
-      <article className='flex flex-wrap justify-center gap-8'>
+      <article className='flex flex-wrap justify-center gap-4 md:mx-auto md:w-3/4 lg:w-full'>
         {skills.map((skill) => (
-          <figure
+          <div
             key={skill.name}
-            className='bg-accent-gradient flex h-[120px] w-[120px] flex-col items-center justify-center rounded-full'
+            className='inline-flex h-[200px] w-[200px] flex-col items-center  justify-center gap-3 rounded-full p-2 shadow-sm shadow-gray-900'
           >
             <Image
               src={imageurl(skill.icon).toString()}
               alt={skill.name}
-              width={59}
-              height={59}
+              width={100}
+              height={100}
+              className='rounded-full object-contain'
             />
-            <figcaption className='font-poppins text-white'>
-              {skill.name}
-            </figcaption>
-          </figure>
+            <span className='text-lg text-white'>{skill.name}</span>
+          </div>
         ))}
       </article>
     </section>

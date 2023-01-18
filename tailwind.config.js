@@ -1,21 +1,20 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
-  mode: 'jit',
   theme: {
-    extend: {
-      colors: {
-        primary: '#00040f',
-        secondary: '#00f6ff',
-        dimWhite: 'rgba(255, 255, 255, 0.7)',
-        dimBlue: 'rgba(9, 151, 124, 0.1)',
-      },
-      fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-      },
+    colors: {
+      primary: colors.slate[900],
+      white: colors.slate[100],
+      emerald: colors.emerald[400],
+    },
+    container: {
+      centter: true,
     },
   },
   plugins: [],
