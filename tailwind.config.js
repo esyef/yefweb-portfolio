@@ -24,6 +24,7 @@ module.exports = {
       white: colors.slate[100],
       emerald: colors.emerald[400],
       cyan: colors.cyan[900],
+      accentText: colors.cyan[300],
     },
   },
   plugins: [],

@@ -17,19 +17,21 @@ export default function Home() {
       </Head>
       <div className='inset-0 overflow-hidden bg-primary bg-[url("../assets/dark-pattern.jpg")] bg-cover bg-center'>
         <div className='container mx-auto w-[90%] text-white'>
-          <header className=' '>
+          <header className='container fixed top-0 left-0 right-0  mx-auto w-[90%]'>
             <Navbar />
           </header>
 
-          <section className=''>
-            <Hero />
-          </section>
+          <div className='mt-32'>
+            <section className=''>
+              <Hero />
+            </section>
 
-          <main className=''>
-            <Aboutme />
-            <Skills />
-            <Projects />
-          </main>
+            <main className=''>
+              {/* <Aboutme /> */}
+              <Skills />
+              <Projects />
+            </main>
+          </div>
         </div>
       </div>
     </>

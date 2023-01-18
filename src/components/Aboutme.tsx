@@ -23,13 +23,12 @@ const Aboutme = () => (
         </Button>
       </article>
 
-      <section className='relative lg:w-2/4'>
+      <section className=' lg:w-2/4'>
         <Image
           src={profile}
           alt='Yeferson Olarte Roncancio'
           className='rounded-lg object-contain'
         />
-        <div className='blue__gradient absolute right-20 bottom-20 z-[1] h-[35%] w-[50%]' />
       </section>
     </div>
   </section>
