@@ -40,7 +40,7 @@ const Projects = () => {
           Mis proyectos
         </h3>
         <p className='text-lg md:mx-auto md:max-w-3xl md:text-center'>
-          🔍 Descubre mis proyectos más recientes. 💻 Proyectos de{' '}
+          🔍 Descubre mis proyectos más recientes 💻 proyectos de{' '}
           <span className='text-gradient font-bold'>desarrollo web.</span> 🎨
           Diseños atractivos y modernos enfocados en la{' '}
           <span className='text-gradient font-bold'>

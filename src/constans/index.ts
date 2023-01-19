@@ -1,4 +1,9 @@
-const navLinks = [
+type LINKS = {
+  path: string;
+  title: string;
+};
+
+const navLinks: LINKS[] = [
   {
     path: 'inicio',
     title: 'Inicio',

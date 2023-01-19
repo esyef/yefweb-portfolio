@@ -8,7 +8,7 @@ const roboto = Roboto_Mono({ subsets: ['latin'] });
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={roboto.className}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </main>
   );
 }

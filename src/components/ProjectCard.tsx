@@ -12,7 +12,7 @@ type PROPS = {
 
 const ProjectCard = ({ project }: PROPS) => (
   <div className=' projectCard rounded-lg bg-primary bg-opacity-95 lg:w-[33%]'>
-    <div className='relative flex items-end justify-center'>
+    <div className='relative   flex items-end justify-center'>
       <Image
         className='w-[100%] rounded-lg '
         src={imageurl(project.imgUrl).toString()}

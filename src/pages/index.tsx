@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import { Aboutme, Hero, Navbar, Skills, Projects } from '../components';
 
-// const inter = Inter({ subsets: ['latin'] });
-
 export default function Home() {
   return (
     <>
@@ -15,9 +13,9 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/logo.svg' />
       </Head>
-      <div className='inset-0	 overflow-hidden scroll-smooth bg-primary bg-[url("../assets/dark-pattern.jpg")] bg-cover bg-center'>
+      <div className='inset-0 scroll-smooth bg-primary bg-[url("../assets/dark-pattern.jpg")] bg-cover bg-center'>
         <div className='container mx-auto w-[90%] text-white'>
-          <header className='container fixed top-0 left-0 right-0  mx-auto w-[90%]'>
+          <header className='container fixed top-0 left-0 right-0  z-50 mx-auto w-[90%]'>
             <Navbar />
           </header>
 
@@ -26,7 +24,7 @@ export default function Home() {
               <Hero />
             </section>
 
-            <main className=''>
+            <main className='pb-28'>
               <Skills />
               <Aboutme />
 
