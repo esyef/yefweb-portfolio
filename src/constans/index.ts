@@ -17,4 +17,6 @@ const navLinks = [
   },
 ];
 
-export { navLinks };
+const filterItems = ['UI/UX', 'ReactJs', 'All'];
+
+export { navLinks, filterItems };

@@ -5,5 +5,17 @@ import Skills from './Skills';
 import Projects from './Projects';
 import Menu from './Menu';
 import Sidebar from './Sidebar';
+import ProjectCard from './ProjectCard';
+import FilterProjects from './FilterProjects';
 
-export { Navbar, Hero, Aboutme, Skills, Projects, Menu, Sidebar };
+export {
+  Navbar,
+  Hero,
+  Aboutme,
+  Skills,
+  Projects,
+  Menu,
+  Sidebar,
+  ProjectCard,
+  FilterProjects,
+};
