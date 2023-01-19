@@ -1,16 +1,21 @@
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { client, imageurl } from '../ services';
-import { darkPattern, patternavir } from '../assets';
+import { client } from '../ services';
 import { PROJECTS } from '../types/sanity';
-import Button from './Button';
 import FilterProjects from './FilterProjects';
 import ProjectCard from './ProjectCard';
+
+const Message = () => (
+  <div className='flex flex-col items-center justify-center  p-4'>
+    <p>Ups! Estamos trabajando en nuevos proyectos.⏰ </p>
+    <p>Pronto publicaremos nuevos proyectos, por favor regresa pronto.</p>
+  </div>
+);
 
 const Projects = () => {
   const [projects, setProjects] = useState<PROJECTS[]>([]);
   const [projectsFilter, setProjectsFilter] = useState<PROJECTS[]>([]);
   const [filter, setFilter] = useState('All');
+  const [isEmpty, setIsEmpty] = useState(true);
 
   useEffect(() => {
     const query = '*[_type =="projects"]';
@@ -19,6 +24,14 @@ const Projects = () => {
       setProjectsFilter(data);
     });
   }, []);
+
+  useEffect(() => {
+    if (projectsFilter.length <= 0) {
+      setIsEmpty(true);
+    } else {
+      setIsEmpty(false);
+    }
+  }, [projectsFilter]);
 
   return (
     <section className='pt-[90px]' id='proyectos'>
@@ -45,11 +58,15 @@ const Projects = () => {
         projects={projects}
       />
 
-      <article className='items-center justify-center md:flex md:flex-wrap'>
-        {projectsFilter.map((project) => (
-          <ProjectCard key={project.title} project={project} />
-        ))}
-      </article>
+      {isEmpty && <Message />}
+
+      {
+        <article className='items-center justify-center md:flex md:flex-wrap'>
+          {projectsFilter.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </article>
+      }
     </section>
   );
 };
