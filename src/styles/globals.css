@@ -38,3 +38,7 @@
 .btn-boder {
   @apply border-[1px];
 }
+
+.dot {
+  @apply h-2 w-2 rounded-full bg-accentText;
+}
