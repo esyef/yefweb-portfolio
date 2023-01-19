@@ -21,14 +21,14 @@ export default function Home() {
             <Navbar />
           </header>
 
-          <div className='mt-32'>
+          <div className=''>
             <section className=''>
               <Hero />
             </section>
 
             <main className=''>
               <Skills />
-              {/* <Aboutme /> */}
+              <Aboutme />
 
               <Projects />
             </main>

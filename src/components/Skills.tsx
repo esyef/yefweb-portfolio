@@ -16,7 +16,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className='flex flex-col gap-6'>
+    <section className='mb-16 flex flex-col gap-6 '>
       <h2 className='text-xl font-light sm:text-3xl md:text-center'>
         Un buen <span className='text-gradient font-black'> código </span> es la
         base <br /> De una excelente{' '}
