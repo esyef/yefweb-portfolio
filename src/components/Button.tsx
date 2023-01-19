@@ -16,8 +16,10 @@ const Button = ({ children, type, href, target }: props) => {
     <Link
       href={href}
       className={`${
-        type === 'primary' ? 'btn-boder' : ''
-      } inline-block rounded-lg py-3 px-4 hover:font-semibold hover:shadow-md hover:shadow-accentText hover:transition-all md:hover:scale-105`}
+        type === 'primary'
+          ? 'btn-boder'
+          : 'bg-gradient-to-tr from-cyan to-emerald'
+      } inline-flex items-center gap-2 rounded-lg py-3 px-4 hover:font-semibold hover:shadow-md hover:shadow-accentText hover:transition-all md:hover:scale-105`}
       target={target}
     >
       {children}

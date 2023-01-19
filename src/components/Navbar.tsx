@@ -8,7 +8,7 @@ const Navbar = () => {
   const { active, toggleActive } = useMenu();
 
   return (
-    <nav className='h-86px] flex items-center justify-between border-b-[1px] border-t-white py-6 backdrop-blur md:py-6'>
+    <nav className='h-86px] flex items-center justify-between border-b-[1px] border-t-white py-6 backdrop-blur-xl md:py-6'>
       <Link href='#inicio'>
         <Image src={logo} alt='yefweb logo' width={120} height={120} />
       </Link>

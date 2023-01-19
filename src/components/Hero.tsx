@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { hero } from '../assets';
-
+import { BiCodeCurly } from 'react-icons/bi';
 import Button from './Button';
 
 const Hero = () => {
@@ -22,8 +22,9 @@ const Hero = () => {
           </p>
 
           <div className=''>
-            <Button href='#proyectos' type='primary' target='_blank'>
+            <Button href='#proyectos' type='primary'>
               Ver proyectos
+              <BiCodeCurly />
             </Button>
           </div>
         </article>
