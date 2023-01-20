@@ -17,7 +17,7 @@ const FilterProjects = ({ ...props }) => {
   };
 
   return (
-    <ul className='mb-28 flex flex-wrap items-center justify-center gap-8 rounded-lg p-12 shadow-2xl shadow-primary'>
+    <ul className='mb-6 flex flex-wrap items-center justify-center gap-8 rounded-lg p-12 shadow-2xl shadow-primary'>
       {filterItems.map((title) => (
         <li key={title}>
           <button

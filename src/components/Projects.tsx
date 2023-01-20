@@ -15,7 +15,7 @@ const Projects = () => {
   const [projects, setProjects] = useState<PROJECTS[]>([]);
   const [projectsFilter, setProjectsFilter] = useState<PROJECTS[]>([]);
   const [filter, setFilter] = useState('All');
-  const [isEmpty, setIsEmpty] = useState(true);
+  const [isEmpty, setIsEmpty] = useState(false);
 
   useEffect(() => {
     const query = '*[_type =="projects"]';
@@ -35,7 +35,7 @@ const Projects = () => {
 
   return (
     <section className='pt-[90px]' id='proyectos'>
-      <div className='mb-16 flex flex-col gap-6'>
+      <div className='mb-6 flex flex-col gap-6'>
         <h3 className='text-3xl md:text-center md:text-6xl md:font-semibold'>
           Mis proyectos
         </h3>
@@ -60,13 +60,11 @@ const Projects = () => {
 
       {isEmpty && <Message />}
 
-      {
-        <article className='items-center justify-center md:flex md:flex-wrap'>
-          {projectsFilter.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
-        </article>
-      }
+      <article className='flex-wrap justify-center gap-6 md:flex'>
+        {projectsFilter.map((project) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
+      </article>
     </section>
   );
 };

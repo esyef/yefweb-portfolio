@@ -27,5 +27,5 @@ module.exports = {
       accentText: colors.cyan[300],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };

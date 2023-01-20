@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React from 'react';
 import { navLinks } from '../constans';
 
 type PROPS = {
@@ -16,7 +18,9 @@ const Menu = ({ active, toggleActive }: PROPS) => {
           className={`relative z-50 transition-colors duration-150 hover:text-accentText ${
             nav.path === active ? 'menu text-accentText' : 'text-white'
           }`}
-          onClick={() => toggleActive(nav.path)}
+          onClick={() => {
+            toggleActive(nav.path);
+          }}
         >
           {nav.title}
         </Link>

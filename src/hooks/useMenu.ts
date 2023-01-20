@@ -8,30 +8,45 @@ const useMenu = () => {
     setActive(item);
   };
 
-  // change link active when scrolling
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = navLinks.reduce((obj, link) => {
-        const offset = document.getElementById(link.path)?.offsetTop;
-        if (offset !== undefined) {
-          obj[link.path] = offset;
-        }
-        return obj;
-      }, {} as { [key: string]: number });
+    const inicio = document.getElementById('inicio')?.offsetHeight;
+    const contacto = document.getElementById('contacto')?.offsetHeight;
+    const proyectos = document.getElementById('proyectos')?.offsetHeight;
+    const sobreMi = document.getElementById('sobre-mi')?.offsetHeight;
 
-      for (const link of navLinks) {
-        if (window.scrollY >= sections[link.path] - 50) {
-          setActive(link.path);
-        }
-      }
+    const sections = {
+      inicio,
+      contacto,
+      proyectos,
+      sobreMi,
     };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    console.log(window.scrollY);
   }, []);
+
+  // change link active when scrolling
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const sections = navLinks.reduce((obj, link) => {
+  //       const offset = document.getElementById(link.path)?.offsetTop;
+  //       if (offset !== undefined) {
+  //         obj[link.path] = offset;
+  //       }
+  //       return obj;
+  //     }, {} as { [key: string]: number });
+
+  //     for (const link of navLinks) {
+  //       if (window.scrollY >= sections[link.path] - 5) {
+  //         setActive(link.path);
+  //       }
+  //     }
+  //   };
+
+  //   window.addEventListener('scroll', handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   return {
     active,

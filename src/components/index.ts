@@ -7,6 +7,7 @@ import Menu from './Menu';
 import Sidebar from './Sidebar';
 import ProjectCard from './ProjectCard';
 import FilterProjects from './FilterProjects';
+import Footer from './Footer';
 
 export {
   Navbar,
@@ -18,4 +19,5 @@ export {
   Sidebar,
   ProjectCard,
   FilterProjects,
+  Footer,
 };
