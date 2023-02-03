@@ -37,8 +37,14 @@ const ProjectCard = ({ project }: PROPS) => (
         target='_blank'
         id='github'
         data-tooltip-content='Ver código en github'
+        title='Ir a gitbut'
       >
         <AiFillGithub size='2.5rem' className='hover:text-accentText' />
+        <Tooltip
+          anchorId='github'
+          content='Ver codigo en Github'
+          place='right'
+        />
       </Link>
 
       <Link
@@ -48,9 +54,8 @@ const ProjectCard = ({ project }: PROPS) => (
         data-tooltip-content='Visitar sitio web'
       >
         <GoBrowser size='2.5rem' className='hover:text-accentText' />
+        <Tooltip anchorId='website' />
       </Link>
-      <Tooltip anchorId='website' />
-      <Tooltip anchorId='github' />
     </div>
   </div>
 );
