@@ -8,6 +8,7 @@ import Sidebar from './Sidebar';
 import ProjectCard from './ProjectCard';
 import FilterProjects from './FilterProjects';
 import Footer from './Footer';
+import Form from './Form';
 
 export {
   Navbar,
@@ -20,4 +21,5 @@ export {
   ProjectCard,
   FilterProjects,
   Footer,
+  Form,
 };

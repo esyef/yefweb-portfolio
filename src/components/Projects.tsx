@@ -34,7 +34,7 @@ const Projects = () => {
   }, [projectsFilter]);
 
   return (
-    <section className='pt-[90px]' id='proyectos'>
+    <section className='mb-14 pt-[90px]' id='proyectos'>
       <div className='mb-6 flex flex-col gap-6'>
         <h3 className='text-3xl md:text-center md:text-6xl md:font-semibold'>
           Mis proyectos

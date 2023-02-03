@@ -1,3 +1,4 @@
 import { client, imageurl } from './client.sanity';
+import sendEmail from './emailJs';
 
-export { client, imageurl };
+export { client, imageurl, sendEmail };

@@ -24,4 +24,7 @@ const navLinks: LINKS[] = [
 
 const filterItems = ['UI/UX', 'ReactJs', 'All'];
 
-export { navLinks, filterItems };
+const fullYear = new Date();
+const getYear = fullYear.getFullYear();
+
+export { navLinks, filterItems, getYear };

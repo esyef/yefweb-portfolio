@@ -25,6 +25,7 @@ module.exports = {
       emerald: colors.emerald[400],
       cyan: colors.cyan[900],
       accentText: colors.cyan[300],
+      transparent: colors.transparent,
     },
   },
   plugins: [require('@tailwindcss/forms')],

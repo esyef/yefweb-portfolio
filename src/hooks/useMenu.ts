@@ -8,20 +8,19 @@ const useMenu = () => {
     setActive(item);
   };
 
-  useEffect(() => {
-    const inicio = document.getElementById('inicio')?.offsetHeight;
-    const contacto = document.getElementById('contacto')?.offsetHeight;
-    const proyectos = document.getElementById('proyectos')?.offsetHeight;
-    const sobreMi = document.getElementById('sobre-mi')?.offsetHeight;
+  // useEffect(() => {
+  //   const inicio = document.getElementById('inicio')?.offsetHeight;
+  //   const contacto = document.getElementById('contacto')?.offsetHeight;
+  //   const proyectos = document.getElementById('proyectos')?.offsetHeight;
+  //   const sobreMi = document.getElementById('sobre-mi')?.offsetHeight;
 
-    const sections = {
-      inicio,
-      contacto,
-      proyectos,
-      sobreMi,
-    };
-    console.log(window.scrollY);
-  }, []);
+  //   const sections = {
+  //     inicio,
+  //     contacto,
+  //     proyectos,
+  //     sobreMi,
+  //   };
+  // }, []);
 
   // change link active when scrolling
   // useEffect(() => {
