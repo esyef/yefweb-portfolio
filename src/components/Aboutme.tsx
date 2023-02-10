@@ -11,8 +11,8 @@ const Aboutme = () => {
         <h1 className='mb-6  text-4xl font-bold md:text-center md:text-6xl'>
           Acerca de mí
         </h1>
-        <article className=' gap-[2em] md:flex md:justify-between'>
-          <div className='mb-6   flex flex-col gap-6 self-center md:mb-0'>
+        <article className=' w-full gap-[2em] md:flex md:justify-center'>
+          <div className='mb-6 flex flex-col gap-6 self-center md:mb-0'>
             <p className='max-w-[520px] text-lg'>
               Soy un desarrollador front-end, me especializo en ReactJS para
               construir interfaces de usuario interactivas y aplicaciones de
@@ -31,11 +31,11 @@ const Aboutme = () => {
             </div>
           </div>
 
-          <div className='md:w-3/6'>
+          <div>
             <Image
               src={profile}
               alt='Yeferson Olarte Roncancio'
-              className='rounded-lg object-cover '
+              className='max-w-[350px] rounded-lg object-cover'
             />
           </div>
         </article>
