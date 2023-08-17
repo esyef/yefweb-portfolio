@@ -2,78 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.menu::after {
-  content: '';
-  height: 4px;
-  width: 4px;
-  border-radius: 100%;
-  background: #a5f3fc;
-  position: absolute;
-  left: -0.55rem;
-  top: 50%;
-}
+@layer components {
+  .list {
+    @apply flex flex-wrap  gap-6  py-4 text-center text-xl text-[#f5f5f5];
+  }
 
-.text-gradient {
-  background-image: linear-gradient(to right, #ff0000, #ffff00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.border-gradient {
-  border-bottom: 1px solid transparent;
-  -o-border-image: -o-linear-gradient(left, #a5f3fc, black) 10;
-  border-image: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(#a5f3fc),
-      to(black)
-    )
-    10;
-  border-image: linear-gradient(to right, hsl(186, 94%, 82%), rgb(35, 149, 161))
-    10;
-  border-image-slice: 1;
-}
-
-.btn-boder {
-  @apply border-[1px];
-}
-
-.dot {
-  @apply h-2 w-2 rounded-full bg-accentText;
-}
-
-.projectCard {
-  position: relative;
-}
-
-.projectCard:hover {
-  transform: scale(1.02);
-  transition: all 300ms ease-in-out;
-}
-
-.projectCard:hover > .cta {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.776);
-  opacity: 0.9;
-  border-radius: 0.45rem;
-  overflow: hidden;
-}
-
-.full-blend {
-  box-shadow: 0 0 0 100vmax #0f172a;
-  clip-path: inset(0 -100vmax);
-}
-.footer {
-  background-color: #0f172a;
+  .title_list {
+    @apply text-[#f5f5f5b7];
+  }
 }

@@ -6,5 +6,6 @@ import profile from './profile.jpg';
 import pattern from './pattern.png';
 import patternavir from './pattern.avif';
 import darkPattern from './dark-pattern.jpg';
+import pet from './pet.jpg';
 
-export { close, menu, logo, hero, profile, pattern, patternavir, darkPattern };
+export { pet };

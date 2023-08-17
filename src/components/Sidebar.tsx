@@ -1,45 +1,35 @@
-import Link from 'next/link';
-import React, { useState } from 'react';
-import { CgMenuRight, CgClose } from 'react-icons/cg';
-import { navLinks } from '../constans';
+import Image from 'next/image';
+import { pet } from '../assets';
+import { profile } from '../constans/profile';
+import ContactList from './ContactList';
+import SkillsList from './SkillsList';
 
-type PROPS = {
-  linkItem: string;
-  toggleActive: (item: string) => void;
-};
-
-const Sidebar = ({ linkItem, toggleActive }: PROPS) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleLink = (link: string) => {
-    toggleActive(link);
-    setIsOpen(false);
-  };
-
+export default function Sidebar() {
   return (
-    <section className='relative flex flex-1  items-center justify-end md:hidden'>
-      <button onClick={() => setIsOpen((prev) => !prev)}>
-        {isOpen ? <CgClose size='2rem' /> : <CgMenuRight size='2rem' />}
-      </button>
+    <nav className='fixed left-0 top-0 bottom-0 w-3/12 bg-[#374151] p-8 shadow-2xl'>
+      <section className='flex flex-col gap-4 py-8'>
+        {/* Image profile */}
+        <div className='flex justify-center'>
+          <Image
+            src={pet}
+            alt='Pet'
+            width={200}
+            height={200}
+            className='h-[150px] w-[150px] rounded-full  object-cover shadow-xl'
+          />
+        </div>
 
-      <nav className={`${isOpen ? 'block' : 'hidden'}  `}>
-        <ul className='absolute top-10 right-0  flex animate-sidebar flex-col gap-6 rounded-lg bg-gradient-to-r from-cyan to-primary py-6 px-8 bg-blend-darken delay-150'>
-          {navLinks.map((link) => (
-            <Link
-              href={`#${link.path}`}
-              key={link.path}
-              className={`text-xl font-black ${
-                link.path === linkItem ? 'text-accentText' : 'text-white'
-              }`}
-              onClick={() => toggleLink(link.path)}
-            >
-              {link.title}
-            </Link>
-          ))}
-        </ul>
-      </nav>
-    </section>
+        <section className='text-[#f5f5f5]'>
+          <h1 className='text-lg'>Yeferson Olarte Roncancio</h1>
+          <h2 className='text-base font-bold'>Desarrollador Web</h2>
+        </section>
+      </section>
+
+      <section className='flex flex-col gap-2'>
+        <ContactList />
+        <hr className='text-[#b6abab93]' />
+        <SkillsList />
+      </section>
+    </nav>
   );
-};
-
-export default Sidebar;
+}
